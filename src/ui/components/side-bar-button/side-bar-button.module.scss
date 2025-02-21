@@ -1,0 +1,47 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.sidebarButtonRoot {
+  width: 100%;
+
+  .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    transition: scale 0.3s, color 0.1s;
+    scale: 1;
+    color: $font-dark;
+  
+    &:hover {
+      color: $common-white;
+      scale: 1.05;
+    }
+  
+    .title {
+      margin-left: 16px;
+      color: inherit;
+      width: 100%;
+      transition: opacity 0.2s;
+    }
+  
+    .expanded {
+      opacity: 1;
+
+      @include breakpoint(lg) {
+        opacity: 0;
+      }
+    }
+  
+    .notExpanded {
+      opacity: 0;
+    }
+  
+    .logoContainer {
+      color: $primary-color;
+    }
+  }
+
+}

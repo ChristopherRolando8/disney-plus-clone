@@ -1,0 +1,131 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.homeMainRoot {
+  width: 100%;
+  min-height: 100vh;
+  color: $font-light;
+  padding: 0px 0px 180px;
+  overflow: hidden;
+
+  .carouselWrapper {
+    position: relative;
+
+    .arrowCarouselWrapper {
+      position: absolute;
+      z-index: 999;
+      bottom: 0px;
+      right: 0px;
+      padding: 0px 140px 90px 0px;
+
+      @include breakpoint(lg) {
+        top: 0px;
+        padding: 60px 0px 0px;
+        left: 0px;
+      }
+
+      .arrowCarouselContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > *:not(:first-child) {
+          margin-left: 16px;
+
+          @include breakpoint(lg) {
+            margin-left: 10px;
+          }
+        }
+
+        .rightCarouselArrow {
+          cursor: pointer;
+          padding: 12px;
+          background-color: $primary-color-light;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+
+          @include breakpoint(lg) {
+            padding: 8px;
+            width: 32px;
+            height: 32px;
+          }
+
+          &:hover {
+            background-color: $primary-color-dark;
+          }
+
+          .logoContainer {   
+            margin: auto;
+    
+            img {
+              width: 36px;
+              height: 36px;
+
+              @include breakpoint(lg) {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+
+        .leftCarouselArrow {
+          cursor: pointer;
+          padding: 12px;
+          background-color: $primary-color-light;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+
+          @include breakpoint(lg) {
+            padding: 8px;
+            width: 32px;
+            height: 32px;
+          }
+
+          &:hover {
+            background-color: $primary-color-dark;
+          }
+
+          .logoContainer {   
+            margin: auto;
+    
+            img {
+              rotate: 180deg;
+              width: 36px;
+              height: 36px;
+
+              @include breakpoint(lg) {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .carouselContainer {
+    margin-top: 16px;
+
+    & > *:not(:first-child) {
+      margin-top: 90px;
+      
+      @include breakpoint(lg) {
+        margin-top: 48px;
+      }
+    }
+  
+    .cardWrapper {
+      min-width: 232px;
+      max-width: 232px;
+
+      @include breakpoint(lg) {
+        min-width: 180px;
+        max-width: 180px;
+      }
+    }
+  }
+}

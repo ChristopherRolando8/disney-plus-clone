@@ -1,0 +1,116 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.cardEpisodeRoot {
+  padding: 8px 8px 8px 0px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  scale: 1;
+  transition: background-color 0.1s, scale 0.3s;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    flex-direction: column;
+  }
+
+  &:hover {
+    background-color: $background-darkest;
+    scale: 1.03;
+  }
+
+  .imageContainer {
+    position: relative;
+    height: 124px;
+    width: 220px;
+    min-width: 220px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: $primary-color;
+
+    @include breakpoint(sm) {
+      height: 160px;
+      width: 100%;
+      min-width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .titlePlaceholder {
+      width: 220px;
+      height: 124px;
+      z-index: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint(sm) {
+        height: 160px;
+        width: 100%;
+      }
+
+      .titlePlaceholderText {
+        text-align: center;
+        color: $primary-color-lighter;
+      }
+    }
+  }
+
+  .contentContainer {
+    padding-left: 32px;
+
+    @include breakpoint(sm) {
+      padding: 30px 30px;
+      background-color: $primary-color-dark;
+      border-radius: 8px;
+    }
+
+    .nameText {
+      font-weight: 700;
+    }
+
+    .overviewText {
+      margin: 0px;
+    }
+
+    .detailChipContainer {
+      display: flex;
+      align-items: center;
+      color: $common-white;
+
+      .chipText {
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .circleDivider {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin: 0px 10px;
+        background-color: $font-dark;
+      }
+    }
+  }
+}
+
+.cardEpisodeLoadingRoot {
+  width: 886px;
+  height: 124px;
+  background-color: $primary-color;
+  border-radius: 4px;
+  animation: skeleton-loading 1s linear infinite alternate;
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color:  $primary-color;
+    }
+    100% {
+      background-color: $primary-color-light
+    }
+  }
+}

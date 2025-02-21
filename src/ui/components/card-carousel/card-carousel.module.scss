@@ -1,0 +1,121 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.cardCarouselRoot {
+  width: 100%;
+
+  .titleText {
+    margin-bottom: 16px;
+  }
+
+  .wrapper {
+    position: relative;
+    height: 310px;
+
+    @include breakpoint(lg) {
+      height: 240px;
+    }
+
+    .cardWrapper {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      z-index: 105;
+
+      .cardContainer {
+        width: 100%;
+        display: flex;
+        position: relative;
+        scroll-behavior: smooth;
+        
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    
+        &::webkit-scrollbar {
+          display: none;
+        }
+    
+        & > *:not(:first-child) {
+          margin-left: 6px;
+        }
+    
+        .hide {
+          opacity: 1;
+        }
+    
+        .hide {
+          opacity: 0;
+        }
+    
+        
+      }
+    }
+
+    .hide {
+      opacity: 0
+    }
+
+    .show {
+      opacity: 1
+    }
+
+    .rightArrowContainer {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: -10px;
+      width: 110px;
+      background: rgb(15,16,20);
+      background: linear-gradient(270deg, rgba(15,16,20,1) 0%, rgba(15,16,20,0.6026785714285714) 51%, rgba(22,24,31,0.09007352941176472) 100%);
+      transition: opacity 0.6s;
+      z-index: 500;
+      cursor: pointer;
+      height: 312px;
+
+      @include breakpoint(lg) {
+        width: 80px;
+        height: 242px;
+        opacity: 1 !important;
+      }
+
+      .logoContainer {   
+        margin: auto;
+
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+
+    .leftArrowContainer {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      left: 0px;
+      width: 110px;
+      background: rgb(15,16,20);
+      background: linear-gradient(90deg, rgba(15,16,20,1) 0%, rgba(15,16,20,0.6026785714285714) 51%, rgba(22,24,31,0.09007352941176472) 100%);
+      transition: opacity 0.6s;
+      z-index: 500;
+      cursor: pointer;
+      height: 312px;
+
+      @include breakpoint(lg) {
+        width: 80px;
+        height: 242px;
+        opacity: 1 !important;
+      }
+      
+      .logoContainer {   
+        margin: auto;
+
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}

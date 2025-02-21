@@ -1,0 +1,75 @@
+// ? This stores the fonts definition to be used through out the app
+
+@import './colors.scss';
+@import '@/styles/media';
+
+html {
+  color: $font-dark;
+	font-family: 'Inter', sans-serif;
+}
+
+.font-h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 0;
+
+  @include breakpoint(lg) {
+    font-size: 32px;
+  }
+}
+
+.font-h2 {
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 0;
+
+  @include breakpoint(lg) {
+    font-size: 26px;
+  }
+}
+
+.font-h3 {
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: bold;
+  margin: 0;
+
+  @include breakpoint(lg) {
+    font-size: 22px;
+  }
+}
+
+.font-h4 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: bold;
+  margin: 0;
+
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+}
+
+.font-h5 {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: bold;
+  margin: 0;
+
+  @include breakpoint(lg) {
+    font-size: 18px;
+  }
+}
+
+.font-p {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: normal;
+  margin: 0;
+
+  @include breakpoint(lg) {
+    font-size: 16px;
+  }
+}

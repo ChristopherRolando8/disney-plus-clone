@@ -1,0 +1,46 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.buttonRoot {
+  background-color: $common-white;
+  padding: 8px;
+  border-radius: 8px;
+  color: $primary-color;
+  cursor: pointer;
+  transition: background-color 0.5s, scale 0.5s;
+  scale: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+
+  @include breakpoint(lg) {
+    min-height: 40px;
+  }
+
+  &:hover {
+    scale: 1.02;
+  }
+
+  .loader {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 4px solid $common-grey;
+    border-top: 4px solid $primary-color;
+    animation: spin 1.4s linear infinite;
+  }
+}
+
+.buttonFullWidth {
+  width: 100%
+}
+
+.buttonNormalWidth {
+  width: fit-content;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

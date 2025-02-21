@@ -1,0 +1,23 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.pageLayoutRoot {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $background-dark;
+
+  .childrenContainer {
+    background-color: $background-dark;
+    overflow: hidden;
+  }
+
+  .usePadding {
+    padding-left: 160px;
+
+    @include breakpoint(lg) {
+      padding-left: 80px;
+    }
+  }
+}
+

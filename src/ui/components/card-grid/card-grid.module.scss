@@ -1,0 +1,41 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.cardGridRoot {
+  width: 100%;
+  
+  .cardGridWrapper {
+    padding-right: 140px;
+
+    @include breakpoint(lg) {
+      padding-right: 36px;
+    }
+
+    .titleText {
+      margin-bottom: 16px;
+    }
+  
+    .wrapper {
+      display: grid;
+  
+      grid-template-columns: repeat(auto-fit, minmax(232px, 0fr));
+      grid-auto-rows: auto;
+      column-gap: 8px;
+      row-gap: 30px;
+
+      @include breakpoint(lg) {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 0fr));
+
+        column-gap: 6px;
+        row-gap: 14px;
+      }
+
+      @include breakpoint(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+
+}

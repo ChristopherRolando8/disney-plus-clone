@@ -1,0 +1,43 @@
+@import '@/styles/colors';
+@import '@/styles/media';
+
+.notFoundMain {
+  width: 100%;
+  min-height: 100vh;
+  color: $font-light;
+  overflow: hidden;
+  padding: 80px 0px 180px;
+
+  @include breakpoint(lg) {
+    padding: 50px 0px 100px;
+  }
+
+  .noResultContainer {
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-right: 140px;
+
+    @include breakpoint(lg) {
+      margin-right: 36px;
+    }
+
+    .noResultText {
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .noResultDetailText {
+      color: $font-normal;
+      text-align: center;
+
+      .notFoundTextCTA {
+        color: $common-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
